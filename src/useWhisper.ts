@@ -155,6 +155,14 @@ export const useWhisper: UseWhisperHook = (config) => {
   }
 
   /**
+   * reset transcript to the default state
+   * - set defaultTranscript value to the transcript
+   */
+  const resetTranscript = () => {
+    setTranscript(defaultTranscript)
+  }
+
+  /**
    * start speech recording event
    * - first ask user for media stream
    * - create recordrtc instance and pass media stream to it
@@ -535,5 +543,6 @@ export const useWhisper: UseWhisperHook = (config) => {
     pauseRecording,
     startRecording,
     stopRecording,
+    resetTranscript,
   }
 }
